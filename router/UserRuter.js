@@ -8,7 +8,7 @@ const userRouter = express.Router();
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     // Using absolute path
-    cb(null, path.resolve(__dirname, '../../Frontend/public/'));
+    cb(null);
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);
